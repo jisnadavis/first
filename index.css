@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+:root {
+  /* Fonts */
+  --rc-font-primary: 'Roboto', sans-serif;
+  --rc-font-secondary: 'Mooli', sans-serif;
+
+  /* Colors */
+  --rc-color-white: #fdfcfc;
+  --rc-color-light-gray: #f6f6f6;
+  --rc-color-blue: #8eadd5;
+  --rc-color-dark: #201f1f;
+
+  /* Backgrounds */
+  --rc-bg-primary: var(--rc-color-white);
+  --rc-bg-secondary: var(--rc-color-light-gray);
+  --rc-bg-accent: var(--rc-color-blue);
+
+  /* Text Colors */
+  --rc-text-dark: var(--rc-color-dark);
+  --rc-text-light: var(--rc-color-white);
+
+  /* Font Sizes */
+  --rc-font-size-h1: 3.125em;
+  --rc-font-size-h2: 2.1875em;
+  --rc-font-size-h3: 1.5625em;
+  --rc-font-size-text: 1.25em;
+  --rc-font-size-link: 1.25em;
+
+  /* Spacings */
+  --rc-gap-xl: 50px;
+  --rc-gap-lg: 30px;
+  --rc-gap-md: 20px;
+  --rc-gap-sm: 10px;
+
+  --rc-padding-xl: 60px;
+  --rc-padding-lg: 30px;
+  --rc-padding-md: 20px;
+  --rc-padding-sm: 10px;
+
+  --rc-margin-section: 130px;
+
+  /* Borders */
+  --rc-radius-md: 5px;
+  --rc-radius-lg: 15px;
+}
+
+/* Reseteamos los estilos por defecto de la página */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: var(--rc-font-primary);
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--rc-gap-lg);
+}
+
+.common-padding {
+  padding: var(--rc-padding-lg) var(--rc-padding-xl);
+}
+.menu {
+  width: 50px;
+  display: none;
+}
+/*header tag*/
+#principal_header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background-color: var(--rc-bg-primary);
+}
+@media (max-width: 700px) {
+  #principal_header {
+    padding: var(--rc-gap-lg);
+  }
+
+  #principal_header > nav {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    cursor: pointer;
+  }
+}
+/*main*/
+#hero {
+  padding-top: 150px;
+  display: flex;
+}
+#hero > img {
+  width: 400px;
+}
+#hero > div {
+  flex-direction: column;
+  gap: var(--rc-gap-lg);
+  align-items: flex-start;
+  width: 400px;
+}
+#hero > div > h2 {
+  font-size: var(--rc-font-size-h1);
+}
+@media (max-width: 1040px) {
+  #hero {
+    padding: var(--rc-gap-lg);
+    padding-top: 150px;
+  }
+  #hero > div {
+    width: 300px;
+    align-items: center;
+  }
+
+  #hero > div > h2 {
+    font-size: var(--rc-font-size-h2);
+    text-align: center;
+  }
+
+  #hero > div > p {
+    text-align: center;
+  }
+
+  #hero > img {
+    width: 350px;
+  }
+}
+@media (min-width: 1400px) {
+  #hero {
+    justify-content: space-around;
+  }
+}
+#companies {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--rc-margin-section);
+  align-items: center;
+  gap: var(--rc-gap-lg);
+}
+
+#companies div {
+  width: 80%;
+
+  background-color: var(--rc-bg-secondary);
+  border-radius: var(--rc-radius-lg);
+  justify-content: space-around;
+  max-width: 680px;
+  min-width: 340px;
+}
+#companies img {
+  width: 80px;
+  height: 60px;
+}
+@media (max-width: 700px) {
+  #companies img {
+    width: 40px;
+    height: 40px;
+  }
+}
+#test {
+  display: flex;
+  margin-top: var(--rc-margin-section);
+  flex-wrap: wrap;
+}
+#test img {
+  width: 200px;
+  border-radius: 100%;
+  border: 2px solid var(--rc-bg-secondary);
+}
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--rc-gap-sm);
+  border-radius: var(--rc-radius-lg);
+  width: 30%;
+  min-width: 200px;
+  padding: var(--rc-padding-md);
+  background-color: var(--rc-bg-secondary);
+}
+@media (max-width: 700px) {
+  .person {
+    min-width: 300px;
+  }
+}
+#foot {
+  display: flex;
+  width: 100%;
+  margin-top: var(--rc-margin-section);
+  background-color: var(--rc-color-light-gray);
+  gap: var(--rc-gap-lg);
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: var(--rc-gap-lg);
+}
+#foot li:first-child {
+  font-weight: bold;
+}
+#foot ul {
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 200px;
+}
