@@ -108,6 +108,14 @@
 #hero > div > h2 {
   font-size: var(--rc-font-size-h1);
 }
+#hero button {
+  width: 100px;
+  height: 35px;
+  border: none;
+
+  background-color: var(--rc-color-blue);
+  border-radius: var(--rc-radius-md);
+}
 @media (max-width: 1040px) {
   #hero {
     padding: var(--rc-gap-lg);
