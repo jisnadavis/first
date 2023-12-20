@@ -80,6 +80,7 @@
 @media (max-width: 700px) {
   #principal_header {
     padding: var(--rc-gap-lg);
+    max-height: 90px;
   }
 
   #principal_header > nav {
