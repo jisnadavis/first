@@ -77,6 +77,9 @@
   width: 100%;
   background-color: var(--rc-bg-primary);
 }
+#companies > div img {
+  object-fit: contain;
+}
 @media (max-width: 700px) {
   #principal_header {
     padding: var(--rc-gap-lg);
